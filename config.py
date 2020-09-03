@@ -9,6 +9,9 @@ if not os.path.exists('build'):
 
 input_dir = config_json['input_data_dir']
 input_file = config_json['input_data_file_name']
-input_size = (config_json['input_size'], config_json['output_size'])
+input_size = (config_json['network_input_size'], config_json['network_output_size'])
 
-lstm_size = config_json['enc_lstm_units']
+lstm_size = config_json['network_enc_lstm_units']
+
+output_tf_model_name = config_json['output_tf_model_name']
+output_tf_lite_model_name = config_json['output_tf_lite_model_name']

@@ -1,6 +1,6 @@
 from sklearn.model_selection import train_test_split
 
-from config import input_dir, input_file, input_size, lstm_size
+from config import input_dir, input_file, input_size, lstm_size, output_tf_model_name, output_tf_lite_model_name
 from model import build_params, build_model
 from predict import infer
 from train import train_lsmt, save_lstm_model
@@ -32,7 +32,7 @@ def train_and_save_model():
     x_train, x_test, y_train, y_test = setup_test_and_train_set("{}/{}".format(input_dir, input_file))
     model, params = setup_model(x_train, y_train)
     train_lsmt(model, params, x_train, x_test, y_train, y_test)
-    save_lstm_model(model, "final_model.wb", "final_tflite.rt")
+    save_lstm_model(model, output_tf_model_name, output_tf_lite_model_name)
 
 
 def infer_from_model(model_name, messages):

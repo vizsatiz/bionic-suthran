@@ -1,6 +1,8 @@
 {
   "input_data_dir": "/Users/<dir_name>",
   "input_data_file_name": "input_data.csv",
+  "output_tf_model_name": "output_model.tf",
+  "output_tf_lite_model_name": "output_model_tf_lite.tflite",
   "input_size": 240,
   "output_size": 255,
   "enc_lstm_units": 128
