@@ -1,0 +1,7 @@
+{
+  "input_data_dir": "/Users/<dir_name>",
+  "input_data_file_name": "input_data.csv",
+  "input_size": 240,
+  "output_size": 255,
+  "enc_lstm_units": 128
+}
